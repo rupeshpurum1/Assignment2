@@ -106,7 +106,6 @@ namespace ISM6225_Spring_2024_Assignment_2
             {
                 //Here, after the k unique values, i am putting 0 for the remaining values.
 
-
                 // Create a new array with the same size as the original
                 int[] resultArray = new int[nums.Length];
                 try
@@ -167,8 +166,6 @@ namespace ISM6225_Spring_2024_Assignment_2
             {
                 try
                 {
-                    // Write your code here and you can modify the return value according to the requirements
-
                     int nonZeroIndex = 0; // Index to store non-zero elements
 
                     // Iterate through the array
@@ -237,9 +234,7 @@ namespace ISM6225_Spring_2024_Assignment_2
                 IList<IList<int>> threeSum = new List<IList<int>>();
                 try
                 {
-                    // Write your code here and you can modify the return value according to the requirements
-
-
+                 
                     //Sort the array
                     Array.Sort(nums);
                     for (int i = 0; i < nums.Length; i++) {
@@ -312,6 +307,7 @@ namespace ISM6225_Spring_2024_Assignment_2
                 try
                 {        
                     int sum = 0;
+                //Looping through the elements to find the maximum consecutive ones
                     foreach (int num in nums) {
                         if (num == 1)
                         {
@@ -359,7 +355,6 @@ namespace ISM6225_Spring_2024_Assignment_2
                 int decimalValue = 0;
                 try
                 {
-                    // Write your code here and you can modify the return value according to the requirements
                     
                     int placeValue = 1;
                     while (binary > 0) {
@@ -423,9 +418,12 @@ namespace ISM6225_Spring_2024_Assignment_2
                     {
                         return 0;
                     }
+                    //sorting the array using inbuilt function
                     Array.Sort(nums);
+                //Math.Abs inbuilt function to find the distance
                     for (int i =1; i <nums.Length; i++) {
                         int diff = Math.Abs(nums[i] - nums[i - 1]);
+                    //if distance is greater than the current max, max value is updated
                         if (diff > max) {
                             max = diff;
                         }
@@ -469,10 +467,12 @@ namespace ISM6225_Spring_2024_Assignment_2
             {
                 try
                 {
+                //sorting the array to ease the operation
                     Array.Sort(nums);
-
+                // adding the values from largest since we are aiming the largest perimiter
                     for (int i = nums.Length - 1; i >= 2; --i)
                     {
+                    //only when the third element(smaller than the remaing two) is greater than the sum of two, it is considered for the traingle.
                         int c = nums[i - 1] + nums[i - 2];
                         if (c > nums[i])
                         {
